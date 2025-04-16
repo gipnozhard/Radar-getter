@@ -1,0 +1,31 @@
+{
+  "radars": [
+    {
+      "id": "radar1",
+      "base_url": "http://212.67.30.217:2011"
+    },
+    {
+      "id": "radar2",
+      "base_url": "http://212.67.30.217:2013"
+    },
+    {
+      "id": "radar3",
+      "base_url": "http://212.67.30.217:2015"
+    },
+    {
+      "id": "radar4",
+      "base_url": "http://212.67.30.217:2017"
+    }
+  ],
+  "postgres": {
+    "host": "localhost",
+    "port": 5432,
+    "user": "radar_user",
+    "password": "password",
+    "dbname": "radar_db"
+  },
+  "mongodb": {
+    "uri": "mongodb://localhost:27017",
+    "dbname": "radar_db"
+  }
+}

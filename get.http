@@ -1,0 +1,27 @@
+# детектор 1
+###
+http://212.67.30.217:2011/api/realtime/occupancy
+###
+http://212.67.30.217:2011/api/stats/all
+###
+
+# детектор 2
+###
+http://212.67.30.217:2013/api/realtime/occupancy
+###
+http://212.67.30.217:2013/api/stats/all
+###
+
+# детектор 3
+###
+http://212.67.30.217:2015/api/realtime/occupancy
+###
+http://212.67.30.217:2015/api/stats/all
+###
+
+# детектор 4
+###
+http://212.67.30.217:2017/api/realtime/occupancy
+###
+http://212.67.30.217:2017/api/stats/all
+###

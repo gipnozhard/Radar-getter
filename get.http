@@ -9,7 +9,8 @@ http://212.67.30.217:2011/api/stats/all
 ###
 http://212.67.30.217:2013/api/realtime/occupancy
 ###
-http://212.67.30.217:2013/api/stats/all
+
+    http://212.67.30.217:2013/api/stats/all
 ###
 
 # детектор 3

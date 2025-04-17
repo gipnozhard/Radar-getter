@@ -16,6 +16,7 @@ import (
 )
 
 func main() {
+
 	cfg, err := config.LoadConfig("data.json")
 	if err != nil {
 		log.Fatalf("Failed to load config: %v", err)
@@ -26,13 +27,23 @@ func main() {
 	if err != nil {
 		log.Fatalf("Failed to initialize Postgres repository: %v", err)
 	}
-	defer postgresRepo.Close()
+	defer func(postgresRepo *repository.PostgresRepository) {
+		err := postgresRepo.Close()
+		if err != nil {
+
+		}
+	}(postgresRepo)
 
 	mongoRepo, err := repository.NewMongoRepository(&cfg.MongoDB)
 	if err != nil {
 		log.Fatalf("Failed to initialize MongoDB repository: %v", err)
 	}
-	defer mongoRepo.Close()
+	defer func(mongoRepo *repository.MongoRepository) {
+		err := mongoRepo.Close()
+		if err != nil {
+
+		}
+	}(mongoRepo)
 
 	// Создание коллекторов для каждого радара
 	var collectors []*usecase.Collector
